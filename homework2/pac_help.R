@@ -48,9 +48,12 @@ if (!require("tidyverse", quietly = TRUE)) {
 #############################
 library('tidyverse')
 
-print(paste0('load package', pack_name,'successfully! version: ', packageVersion('tidyverse')))
+pack_name <- 'tidyverse'
+
+print(paste0('load package ', pack_name,' successfully! version: ', packageVersion('tidyverse')))
 
 ?tidyverse() # view the R documentation for package 'tidyverse'
+??tidyverse # other methods/functions in tidyverse
 
 help(package='tidyverse') # view the help pages for package 'tidyverse'
 
