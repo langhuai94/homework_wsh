@@ -35,9 +35,16 @@ rownames(A) <- c('a','b','c')
 A
 
 ######
+
+# or 
+# A <- t(A)
+# A
+
 # Each row represents a vector
 (A <- matrix(data = cbind(x,y,z), ncol = 3, byrow = TRUE))
 # or: (A <- matrix(data = rbind(x,y,z), ncol = 3, byrow = FALSE))
+
+
 
 # Change colnames into "a" "b" "c"
 colnames(A) <- c('a','b','c')
@@ -48,8 +55,12 @@ A
 # Exercise #2
 ######
 
+library('ade4')
+
 # Import the doubs data of ade4 package into the R environment
-data(doubs,package='ade4')
+data(package='ade4')
+
+# data(doubs, package='ade4')
 
 # check data types and structure
 # data type
@@ -61,5 +72,12 @@ str(doubs)
 
 save(doubs, file = "./ade4_doubs.RData")
 # load("./ade4_doubs.RData")
+
+# setwd('./R_data')
+# for(a in seq(1,4,1))
+# {
+#   write.csv(doubs[a],paste0('./doubs_',a,'.csv'))
+# }
+
 
 
